@@ -68,28 +68,29 @@
             </blocks>
         </aside>
         <nav class="border-right-1px-solid border-color-db box-sizing-border-box" data-height="calc(100% - 45px)" data-width="320px">
-            <blocks>
-                <header class="border-bottom-1px-solid border-color-db border-right-1px-solid box-sizing-border-box position-fixed top-0" data-height="45px" data-width="320px" data-z-index="5">
-                    <row class="justify-content-space-between" data-width="100%">
-                        <card class="box-sizing-border-box line-height-45px" data-width="240px">
-                            <row>
-                                <box>
-                                    <ico>
-                                        <n class="gg-search"></n>
-                                    </ico>
-                                </box>
-                                <box class="flex-1">
-                                    <input class="font-size-17px line-height-45px" type="text" placeholder="Search all notes">
-                                </box>
-                            </row>
-                        </card>
-                    </row>
-                </header>
-                <block></block>
+            <header class="border-bottom-1px-solid border-color-db border-right-1px-solid box-sizing-border-box position-fixed top-0" data-height="45px" data-width="320px" data-z-index="5">
+                <row class="justify-content-space-between" data-width="100%">
+                    <card class="box-sizing-border-box line-height-45px" data-width="240px">
+                        <row>
+                            <box>
+                                <ico>
+                                    <n class="gg-search"></n>
+                                </ico>
+                            </box>
+                            <box class="flex-1">
+                                <input class="font-size-17px line-height-45px" type="text" placeholder="Search all notes">
+                            </box>
+                        </row>
+                    </card>
+                </row>
+            </header>
+            <blocks class="empty"></blocks>
+            <blocks class="align-items-center empty-state flex-1 height-100pct justify-content-center width-100pct">
+                <text>No Notes</text>
             </blocks>
         </nav>
         <main class="flex-1" data-height="calc(100% - 45px)">
-            <header class="box-sizing-border-box flex-1 position-absolute top-minus-45px width-100pc" data-height="45px" data-z-index="5">
+            <header class="box-sizing-border-box flex-1 position-absolute top-minus-45px width-100pct" data-height="45px" data-z-index="5">
                 <row class="justify-content-space-between" data-width="100%">
                     <card class="box-sizing-border-box flex-1 line-height-45px">
                         <row class="justify-content-space-between">
@@ -142,7 +143,7 @@
                         <row>
                             <box class="padding-x-20px">
                                 <row>
-                                    <text class="font-size-19px font-weight-bolder" placeholder="Name"></text>
+                                    <text class="font-size-19px font-weight-bolder" placeholder="Guest"></text>
                                     <ico data-width="20px">
                                         <n class="gg-chevron-down"></n>
                                     </ico>

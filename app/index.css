@@ -231,7 +231,7 @@
         flex: 1;
     }
 
-    .flex-align-items-center {
+    .align-items-center {
         align-items: center;
     }
 
@@ -600,7 +600,7 @@
         width: 320px;
     }
 
-    .width-100pc, [data-width="100%"] {
+    .width-100pct, [data-width="100%"] {
         width: 100%;
     }
 
