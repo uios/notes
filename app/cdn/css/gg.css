@@ -212,6 +212,65 @@
 }
 
 @media screen {
+    .gg-options {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 10px;
+        height: 2px;
+        box-shadow: -3px 4px 0 0, 3px -4px 0 0
+    }
+
+    .gg-options::after, .gg-options::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border: 2px solid;
+        border-radius: 100%
+    }
+
+    .gg-options::before {
+        top: -7px;
+        left: -4px
+    }
+
+    .gg-options::after {
+        bottom: -7px;
+        right: -4px
+    }
+}
+
+@media screen {
+    .gg-math-plus, .gg-math-plus::after {
+        display: block;
+        box-sizing: border-box;
+        background: currentColor;
+        border-radius: 10px
+    }
+
+    .gg-math-plus {
+        margin-top: -2px;
+        position: relative;
+        transform: scale(var(--ggs,1));
+        width: 16px;
+        height: 2px
+    }
+
+    .gg-math-plus::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 16px;
+        top: -7px;
+        left: 7px
+    }
+}
+
+@media screen {
     .gg-search {
         box-sizing: border-box;
         position: relative;
