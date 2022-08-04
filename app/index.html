@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>Notes | uiOS</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+        <link href="/index.css" rel="stylesheet">
+        <link href="/cdn/css/gg.css" rel="stylesheet">
+        <script src="/cdn/js/vanilla.js"></script>
+        <script src="/cdn/js/mvc.js"></script>
+        <script src="/cdn/js/on.js"></script>
+        <script src="/cdn/js/router.js"></script>
+        <script src="/cdn/js/touch.js"></script>
+        <script src="/index.js"></script>
+    </head>
+    <body class="flex flex-direction-row flex-wrap-wrap" data-theme="meridiem">
+        <boot id="boot"></boot>
+        <header class="border-bottom-1px-solid border-color-db box-sizing-border-box" data-height="45px" data-width="100%" data-z-index="5">
+            <row class="justify-content-space-between" data-width="100%">
+                <card class="border-color-db border-right-1px-solid box-sizing-border-box" data-width="240px">
+                    <row>
+                        <box>
+                            <ico>
+                                <n class="gg-notes"></n>
+                            </ico>
+                        </box>
+                        <box>
+                            <text class="font-weight-bolder line-height-45px">Notes</text>
+                        </box>
+                    </row>
+                </card>
+            </row>
+        </header>
+        <aside class="border-right-1px-solid border-color-db box-sizing-border-box" data-height="calc(100% - 45px)" data-width="240px" data-1280px-width="">
+            <blocks class="flex height-100pct">
+                <block>
+                    <section>
+                        <card class="box-sizing-border-box line-height-45px" data-width="240px">
+                            <row>
+                                <box>
+                                    <ico>
+                                        <n class="gg-folder"></n>
+                                    </ico>
+                                </box>
+                                <box class="border-bottom-1px-solid border-color-db box-sizing-border-box flex-1">
+                                    <text>All Notes</text>
+                                </box>
+                            </row>
+                        </card>
+                    </section>
+                </block>
+                <block class="box-sizing-border-box border-top-1px-solid border-color-db margin-top-auto">
+                    <section>
+                        <card>
+                            <row class="space-between">
+                                <box>
+                                    <ico>
+                                        <n class="gg-options"></n>
+                                    </ico>
+                                </box>
+                                <box>
+                                    <ico>
+                                        <n class="gg-plus"></n>
+                                    </ico>
+                                </box>
+                            </row>
+                        </card>
+                    </section>
+                </block>
+            </blocks>
+        </aside>
+        <nav class="border-right-1px-solid border-color-db box-sizing-border-box" data-height="calc(100% - 45px)" data-width="320px">
+            <blocks>
+                <header class="border-bottom-1px-solid border-color-db border-right-1px-solid box-sizing-border-box position-fixed top-0" data-height="45px" data-width="320px" data-z-index="5">
+                    <row class="justify-content-space-between" data-width="100%">
+                        <card class="box-sizing-border-box line-height-45px" data-width="240px">
+                            <row>
+                                <box>
+                                    <ico>
+                                        <n class="gg-search"></n>
+                                    </ico>
+                                </box>
+                                <box class="flex-1">
+                                    <input class="font-size-17px line-height-45px" type="text" placeholder="Search all notes">
+                                </box>
+                            </row>
+                        </card>
+                    </row>
+                </header>
+                <block></block>
+            </blocks>
+        </nav>
+        <main class="flex-1" data-height="calc(100% - 45px)">
+            <header class="box-sizing-border-box flex-1 position-absolute top-minus-45px width-100pc" data-height="45px" data-z-index="5">
+                <row class="justify-content-space-between" data-width="100%">
+                    <card class="box-sizing-border-box flex-1 line-height-45px">
+                        <row class="justify-content-space-between">
+                            <box>
+                                <section>
+                                    <ico>
+                                        <n class="gg-add-r"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                            <box>
+                                <section>
+                                    <ico>
+                                        <n class="gg-view-grid"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                            <box>
+                                <section>
+                                    <ico>
+                                        <n class="gg-check-o"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                            <box>
+                                <section>
+                                    <ico>
+                                        <n class="gg-format-text"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                            <box class="margin-left-auto">
+                                <section>
+                                    <ico>
+                                        <n class="gg-user-add"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                            <box>
+                                <section>
+                                    <ico>
+                                        <n class="gg-trash"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                            <line class="-tablet-display-none background-color-db margin-y-auto" data-height="20px" data-width="1px"></line>
+                        </row>
+                    </card>
+                    <card class="box-sizing-border-box line-height-45px">
+                        <row>
+                            <box class="padding-x-20px">
+                                <row>
+                                    <text class="font-size-19px font-weight-bolder" placeholder="Name"></text>
+                                    <ico data-width="20px">
+                                        <n class="gg-chevron-down"></n>
+                                    </ico>
+                                </row>
+                            </box>
+                        </row>
+                    </card>
+                </row>
+            </header>
+            <blocks>
+                <block></block>
+            </blocks>
+        </main>
+    </body>
+</html>
