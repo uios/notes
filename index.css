@@ -138,7 +138,7 @@
     .background-color-333 {
         background-color: #333;
     }
-    
+
     .background-color-f0 {
         background-color: #f0f0f0;
     }
@@ -213,20 +213,20 @@
 @media {
     .display-none {
         display: none;
-    }    
-        
+    }
+
     .-hover-display-flex:hover, .-hover.-hover-display-flex {
         display: flex;
     }
-    
+
     .-tap .-after--hover--tap-display-flex:hover + *, .-tap.-after--hover--tap-display-flex:hover + * {
         display: flex;
     }
-    
+
     .-tap .-tap-display-flex, .-tap.-tap-display-flex {
         display: flex;
     }
-    
+
     .-tap .-tilde--hover--tap-display-flex:hover ~ *, .-tap.-tilde--hover--tap-display-flex:hover ~ * {
         display: flex;
     }
@@ -338,6 +338,18 @@
     .line-height-30px {
         line-height: 30px;
     }
+
+    @media (max-width: 768px) {
+        .-tablet-line-height-36px {
+            line-height: 36px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .-mobile-line-height-36px {
+            line-height: 36px;
+        }
+    }
 }
 
 /*MARGIN*/
@@ -356,6 +368,18 @@
 
     .margin-top-20px {
         margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .-tablet-margin-top-38px {
+            margin-top: 36px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .-mobile-margin-top-38px {
+            margin-top: 38px;
+        }
     }
 }
 

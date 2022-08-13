@@ -50,12 +50,28 @@ function init() {
     window.location.pathname.router();
 }
 
-window.onhover = {
+window.onmouseover = {
     menu: {
         item: target => {
             byId('menu-backdrop') ? byId('menu-backdrop').remove() : null;
             var html = `<picture class="-tap-display-flex -tilde--hover--tap-display-flex display-none height-100pct left-0 position-fixed top-0 width-100pct z-index-1" data-tap="event.target.closest('header').classList.remove('-tap')" id="menu-backdrop"></picture>`;
             target.closest('box').insertAdjacentHTML('afterend',html);            
+        }
+    }
+}
+
+window.onmouseout = {
+    menu: {
+        item: target => {
+            //$(event.target.closest('header')).toggleClass('-hover').toggleClass('-tap'); onhover.menu.item(event.target);
+        }
+    }
+}
+
+window.ontap = {
+    menu: {
+        item: target => {
+            $(target.closest('header')).toggleClass('-hover').toggleClass('-tap'); onmouseover.menu.item(target);
         }
     }
 }
