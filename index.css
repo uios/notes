@@ -371,14 +371,14 @@
     }
 
     @media (max-width: 768px) {
-        .-tablet-margin-top-38px {
+        .-tablet-margin-top-36px {
             margin-top: 36px;
         }
     }
 
     @media (max-width: 480px) {
-        .-mobile-margin-top-38px {
-            margin-top: 38px;
+        .-mobile-margin-top-36px {
+            margin-top: 36px;
         }
     }
 }
