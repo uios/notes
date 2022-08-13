@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Notes &#8226; uiOS</title>
+        <title>Notes &#8226;uiOS</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
         <link href="index.css" rel="stylesheet">
         <link href="cdn/css/gg.css" rel="stylesheet">
@@ -13,18 +13,20 @@
     </head>
     <body class="background-color-fff flex flex-direction-column" data-theme="meridiem">
         <boot id="boot"></boot>
-        <header class="border-bottom-2px-solid border-color-f0 font-size-12px height-16px line-height-16px width-100pct">
-            <row>
+        <header class="font-size-12px line-height-18px position-relative width-100pct">
+            <picture class="border-bottom-2px-solid border-color-f0 box-sizing-border-box bottom-0 position-absolute width-100pct"></picture>
+            <row class="z-index-2">
                 <card>
                     <column>
-                        <box>
+                        <picture class="-tap-display-flex -tilde--hover--tap-display-flex display-none height-100pct position-fixed width-100pct z-index-1"></picture>
+                        <box class="-after--hover--tap-display-flex z-index-2" data-tap="$(event.target.closest('header')).toggleClass('-tap')">
                             <row>
                                 <text class="padding-x-10px">
                                     <span>File</span>
                                 </text>
                             </row>
                         </box>
-                        <box class="background-color-f0 border-1px-solid border-color-ccc line-height-22px margin-top-18px position-absolute z-index-1 width-227px">
+                        <box class="-hover-display-flex background-color-f0 border-1px-solid border-color-ccc display-none line-height-24px margin-top-18px position-absolute z-index-1 width-227px">
                             <column class="background-color-f2 margin-left-30px">
                                 <text class="padding-x-5px">
                                     <span>New</span>
@@ -56,7 +58,7 @@
                 </card>
                 <card>
                     <column>
-                        <box>
+                        <box class="-after--hover--tap-display-flex z-index-2" data-tap="$(event.target.closest('header')).toggleClass('-tap')">
                             <row>
                                 <text class="padding-x-10px">
                                     <span>Edit</span>
@@ -67,7 +69,7 @@
                 </card>
                 <card>
                     <column>
-                        <box>
+                        <box class="-after--hover--tap-display-flex z-index-2" data-tap="$(event.target.closest('header')).toggleClass('-tap')">
                             <row>
                                 <text class="padding-x-10px">
                                     <span>Format</span>
@@ -78,7 +80,7 @@
                 </card>
                 <card>
                     <column>
-                        <box>
+                        <box class="-after--hover--tap-display-flex z-index-2" data-tap="$(event.target.closest('header')).toggleClass('-tap')">
                             <row>
                                 <text class="padding-x-10px">
                                     <span>View</span>
@@ -89,7 +91,7 @@
                 </card>
                 <card>
                     <column>
-                        <box>
+                        <box class="-after--hover--tap-display-flex z-index-2" data-tap="$(event.target.closest('header')).toggleClass('-tap')">
                             <row>
                                 <text class="padding-x-10px">
                                     <span>Help</span>

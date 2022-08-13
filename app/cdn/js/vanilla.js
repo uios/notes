@@ -46,10 +46,27 @@ Array.prototype.removeClass = function(name) {
     }
     return that;
 }
+Array.prototype.toggleClass = function(name) {
+    var that = this;
+    if (that.length > 1) {
+        for (var i = that.length; i--; ) {
+            var it = this[i];
+            it.hasClass(name) ? it.classList.remove(name) : it.classList.add(name);
+        }
+    } else {
+        that[0].hasClass(name) ? that[0].classList.remove(name) : that[0].classList.add(name);
+    }
+    return that;
+}
+
 Element.prototype.find = function(elem) {
     return this.querySelector(elem);
 }
-window.$ = e=>{
+Element.prototype.hasClass = function(n) {
+    return new RegExp(' ' + n + ' ').test(' ' + this.className + ' ');
+}
+
+window.$ = function(e) {
     var obj = e;
     if (typeof obj === 'object') {
         if (NodeList.prototype.isPrototypeOf(obj)) {
@@ -74,6 +91,7 @@ window.$ = e=>{
     }
     return obj;
 }
+
 window.byId = s=>{
     return document.getElementById(s);
 }

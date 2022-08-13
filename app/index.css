@@ -135,14 +135,18 @@
 
 /*BACKGROUND COLOR*/
 @media screen {
+    .background-color-333 {
+        background-color: #333;
+    }
+    
     .background-color-f0 {
         background-color: #f0f0f0;
     }
-    
+
     .background-color-f2 {
         background-color: #f2f2f2;
     }
-    
+
     .background-color-fff {
         background-color: #fff;
     }
@@ -153,7 +157,7 @@
     .border-1px-solid {
         border: 1px solid;
     }
-    
+
     .border-bottom-2px-solid {
         border-bottom: 2px solid;
     }
@@ -168,7 +172,7 @@
     .border-color-ccc {
         border-color: #ccc;
     }
-    
+
     .border-color-f0 {
         border-color: #f0f0f0;
     }
@@ -185,6 +189,8 @@
 @media screen {
     .box-sizing-border-box {
         box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
     }
 }
 
@@ -199,13 +205,31 @@
     }
 }
 
+/*DISPLAY*/
+@media {
+    .display-none {
+        display: none;
+    }
+    
+    .-hover-display-flex:hover {
+        display: flex;
+    }
+    
+    .-tap .-after--hover--tap-display-flex:hover + *, .-tap.-after--hover--tap-display-flex:hover + * {
+        display: flex;
+    }
+    
+    .-tap .-tap-display-flex, .-tap.-tap-display-flex {
+        display: flex;
+    }
+    
+    .-tap .-tilde--hover--tap-display-flex:hover ~ *, .-tap.-tilde--hover--tap-display-flex:hover ~ * {
+        display: flex;
+    }
+}
+
 /*FLEX*/
 @media screen {
-    .flex {
-        display: flex;
-        display: -webkit-flex;
-    }
-
     .flex-1 {
         flex: 1;
     }
@@ -287,7 +311,7 @@
     .height-16px, [data-height="16px"] {
         height: 16px;
     }
-    
+
     .height-22px, [data-height="22px"] {
         height: 22px;
     }
@@ -299,14 +323,14 @@
 
 /*LINE HEIGHT*/
 @media screen {
-    .line-height-16px {
-        line-height: 16px;
+    .line-height-18px {
+        line-height: 18px;
     }
-    
-    .line-height-22px, [data-line-height="22px"] {
+
+    .line-height-24px, [data-line-height="24px"] {
         line-height: 24px;
     }
-    
+
     .line-height-30px {
         line-height: 30px;
     }
@@ -324,6 +348,10 @@
 
     .margin-top-18px {
         margin-top: 18px;
+    }
+
+    .margin-top-20px {
+        margin-top: 20px;
     }
 }
 
@@ -346,7 +374,7 @@
     .padding-x-5px {
         padding: 0 5px;
     }
-    
+
     .padding-x-10px {
         padding: 0 10px;
     }
