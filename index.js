@@ -50,7 +50,7 @@ function init() {
     window.location.pathname.router();
 }
 
-window.onmouseover = {
+window.mouseover = {
     menu: {
         item: target => {
             byId('menu-backdrop') ? byId('menu-backdrop').remove() : null;
@@ -60,7 +60,7 @@ window.onmouseover = {
     }
 }
 
-window.onmouseout = {
+window.mouseout = {
     menu: {
         item: target => {
             //$(event.target.closest('header')).toggleClass('-hover').toggleClass('-tap'); onhover.menu.item(event.target);
@@ -68,7 +68,7 @@ window.onmouseout = {
     }
 }
 
-window.ontap = {
+window.tap = {
     menu: {
         item: target => {
             $(target.closest('header')).toggleClass('-hover').toggleClass('-tap'); onmouseover.menu.item(target);
