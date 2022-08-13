@@ -147,6 +147,10 @@
         background-color: #f2f2f2;
     }
 
+    .background-color-ccc {
+        background-color: #ccc;
+    }
+
     .background-color-fff {
         background-color: #fff;
     }
@@ -209,9 +213,9 @@
 @media {
     .display-none {
         display: none;
-    }
-    
-    .-hover-display-flex:hover {
+    }    
+        
+    .-hover-display-flex:hover, .-hover.-hover-display-flex {
         display: flex;
     }
     

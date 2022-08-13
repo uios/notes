@@ -15,14 +15,53 @@
         <boot id="boot"></boot>
         <header class="font-size-12px line-height-18px position-relative width-100pct">
             <picture class="border-bottom-2px-solid border-color-f0 box-sizing-border-box bottom-0 position-absolute width-100pct"></picture>
+            <picture class="background-color-ccc display-none height-100pct left-0 position-fixed top-0 width-100pct z-index-1" data-tap="event.target.closest('header').classList.remove('-tap')"></picture>
             <row class="z-index-2">
                 <card>
                     <column>
-                        <picture class="-tap-display-flex -tilde--hover--tap-display-flex display-none height-100pct position-fixed width-100pct z-index-1"></picture>
-                        <box class="-after--hover--tap-display-flex z-index-2" data-tap="$(event.target.closest('header')).toggleClass('-tap')">
+                        <box class="-tilde--hover--tap-display-flex z-index-4" onmouseover="onhover.menu.item(event.target);" data-tap="$(event.target.closest('header')).toggleClass('-hover').toggleClass('-tap'); onhover.menu.item(event.target)">
                             <row>
                                 <text class="padding-x-10px">
                                     <span>File</span>
+                                </text>
+                            </row>
+                        </box>
+                        <box class="-after--hover--tap-display-flex -hover-display-flex background-color-f0 border-1px-solid border-color-ccc display-none line-height-24px margin-top-18px position-absolute z-index-1 width-227px z-index-3">
+                            <column class="background-color-f2 margin-left-30px">
+                                <text class="padding-x-5px">
+                                    <span>New</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>New Window</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Open</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Save</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Save As</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Page Setup</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Print</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Exit</span>
+                                </text>
+                            </column>
+                        </box>
+                    </column>
+                </card>
+                <card>
+                    <column>
+                        <box class="-tilde--hover--tap-display-flex z-index-2" onmouseover="onhover.menu.item(event.target)" data-tap="$(event.target.closest('header')).toggleClass('-hover').toggleClass('-tap'); onhover.menu.item(event.target)">
+                            <row>
+                                <text class="padding-x-10px">
+                                    <span>Edit</span>
                                 </text>
                             </row>
                         </box>
@@ -58,45 +97,103 @@
                 </card>
                 <card>
                     <column>
-                        <box class="-after--hover--tap-display-flex z-index-2" data-tap="$(event.target.closest('header')).toggleClass('-tap')">
-                            <row>
-                                <text class="padding-x-10px">
-                                    <span>Edit</span>
-                                </text>
-                            </row>
-                        </box>
-                    </column>
-                </card>
-                <card>
-                    <column>
-                        <box class="-after--hover--tap-display-flex z-index-2" data-tap="$(event.target.closest('header')).toggleClass('-tap')">
+                        <box class="-tilde--hover--tap-display-flex z-index-2" onmouseover="onhover.menu.item(event.target)" data-tap="$(event.target.closest('header')).toggleClass('-hover').toggleClass('-tap'); onhover.menu.item(event.target)">
                             <row>
                                 <text class="padding-x-10px">
                                     <span>Format</span>
                                 </text>
                             </row>
                         </box>
+                        <box class="-hover-display-flex background-color-f0 border-1px-solid border-color-ccc display-none line-height-24px margin-top-18px position-absolute z-index-1 width-227px">
+                            <column class="background-color-f2 margin-left-30px">
+                                <text class="padding-x-5px">
+                                    <span>New</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>New Window</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Open</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Save</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Save As</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Page Setup</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Print</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Exit</span>
+                                </text>
+                            </column>
+                        </box>
                     </column>
                 </card>
                 <card>
                     <column>
-                        <box class="-after--hover--tap-display-flex z-index-2" data-tap="$(event.target.closest('header')).toggleClass('-tap')">
+                        <box class="-tilde--hover--tap-display-flex z-index-2" onmouseover="onhover.menu.item(event.target)" data-tap="$(event.target.closest('header')).toggleClass('-hover').toggleClass('-tap'); onhover.menu.item(event.target)">
                             <row>
                                 <text class="padding-x-10px">
                                     <span>View</span>
                                 </text>
                             </row>
                         </box>
+                        <box class="-hover-display-flex background-color-f0 border-1px-solid border-color-ccc display-none line-height-24px margin-top-18px position-absolute z-index-1 width-227px">
+                            <column class="background-color-f2 margin-left-30px">
+                                <text class="padding-x-5px">
+                                    <span>New</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>New Window</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Open</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Save</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Save As</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Page Setup</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Print</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Exit</span>
+                                </text>
+                            </column>
+                        </box>
                     </column>
                 </card>
                 <card>
                     <column>
-                        <box class="-after--hover--tap-display-flex z-index-2" data-tap="$(event.target.closest('header')).toggleClass('-tap')">
+                        <box class="-tilde--hover--tap-display-flex z-index-2" onmouseover="onhover.menu.item(event.target)" data-tap="$(event.target.closest('header')).toggleClass('-hover').toggleClass('-tap'); onhover.menu.item(event.target)">
                             <row>
                                 <text class="padding-x-10px">
                                     <span>Help</span>
                                 </text>
                             </row>
+                        </box>
+                        <box class="-hover-display-flex background-color-f0 border-1px-solid border-color-ccc display-none line-height-24px margin-top-18px position-absolute z-index-1 width-227px">
+                            <column class="background-color-f2 margin-left-30px z-index-2">
+                                <text class="padding-x-5px">
+                                    <span>View Help</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>Send Feedback</span>
+                                </text>
+                                <text class="padding-x-5px">
+                                    <span>About Notepad</span>
+                                </text>
+                            </column>
                         </box>
                     </column>
                 </card>
