@@ -1,187 +1,99 @@
 <html>
     <head>
-        <title>Notes &#8226; uiOS</title>
+        <title>Notes &#8226;&#160;uiOS</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
         <link href="index.css" rel="stylesheet">
         <link href="cdn/css/gg.css" rel="stylesheet">
-        <script src="cdn/js/vanilla.js"></script>
-        <script src="cdn/js/mvc.js"></script>
+        <script src="index.js"></script>
         <script src="cdn/js/on.js"></script>
         <script src="cdn/js/router.js"></script>
-        <script src="cdn/js/touch.js"></script>
-        <script src="index.js"></script>
+        <script src="cdn/js/vanilla.js"></script>
     </head>
-    <body class="background-color-fff flex flex-direction-column" data-theme="meridiem">
+    <body class="-dark-background-color-1f background-color-fff" data-theme="system">
         <boot id="boot"></boot>
-        <header class="-tablet-line-height-36px font-size-12px line-height-18px position-relative width-100pct">
-            <picture class="border-bottom-2px-solid border-color-f0 box-sizing-border-box bottom-0 position-absolute width-100pct"></picture>
-            <picture class="background-color-ccc display-none height-100pct left-0 position-fixed top-0 width-100pct z-index-1" data-tap="event.target.closest('header').classList.remove('-tap')"></picture>
-            <row class="z-index-2">
+        <header class="background-color-e4 border-bottom-1px-solid border-color-cb position-fixed width-100pct">
+            <section>
                 <card>
-                    <column>
-                        <box class="-tilde--hover--tap-display-flex z-index-4" onmouseover="mouseover.menu.item(event.target)" onmouseout="mouseout.menu.item(event.target)" data-tap="tap.menu.item(event.target)">
-                            <row>
-                                <text class="padding-x-10px">
-                                    <span>File</span>
-                                </text>
-                            </row>
+                    <row class="align-items-center">
+                        <box class="margin-right-auto">
+                            <section>
+                                <text class="font-size-24px padding-x-10px">Notes</text>
+                            </section>
                         </box>
-                        <box class="-after--hover--tap-display-flex -hover-display-flex -mobile-margin-top-36px -tablet-margin-top-36px background-color-f0 border-1px-solid border-color-ccc display-none line-height-24px margin-top-18px position-absolute z-index-1 width-227px z-index-3">
-                            <column class="background-color-f2 margin-left-30px">
-                                <text class="padding-x-5px">
-                                    <span>New</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>New Window</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Open</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Save</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Save As</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Page Setup</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Print</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Exit</span>
-                                </text>
-                            </column>
+                        <box>
+                            <section>
+                                <ico>
+                                    <n class="-ggs-2 gg-layout-grid"></n>
+                                </ico>
+                            </section>
                         </box>
-                    </column>
+                        <box>
+                            <section>
+                                <ico>
+                                    <n class="gg-more-vertical-alt"></n>
+                                </ico>
+                            </section>
+                        </box>
+                    </row>
                 </card>
-                <card>
-                    <column>
-                        <box class="-tilde--hover--tap-display-flex z-index-2" onmouseover="mouseover.menu.item(event.target)" onmouseout="mouseout.menu.item(event.target)" data-tap="tap.menu.item(event.target)">
-                            <row>
-                                <text class="padding-x-10px">
-                                    <span>Edit</span>
-                                </text>
-                            </row>
-                        </box>
-                        <box class="-hover-display-flex -mobile-margin-top-36px -tablet-margin-top-36px background-color-f0 border-1px-solid border-color-ccc display-none line-height-24px margin-top-18px position-absolute z-index-1 width-227px">
-                            <column class="background-color-f2 margin-left-30px">
-                                <text class="padding-x-5px">
-                                    <span>Undo</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Cut</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Copy</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Paste</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Delete</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Search with Google...</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Find...</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Find Next</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Find Previous</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Replace...</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Go To...</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Select All</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Time/Date</span>
-                                </text>
-                            </column>
-                        </box>
-                    </column>
-                </card>
-                <card>
-                    <column>
-                        <box class="-tilde--hover--tap-display-flex z-index-2" onmouseover="mouseover.menu.item(event.target)" onmouseout="mouseout.menu.item(event.target)" data-tap="tap.menu.item(event.target)">
-                            <row>
-                                <text class="padding-x-10px">
-                                    <span>Format</span>
-                                </text>
-                            </row>
-                        </box>
-                        <box class="-hover-display-flex -mobile-margin-top-36px -tablet-margin-top-36px background-color-f0 border-1px-solid border-color-ccc display-none line-height-24px margin-top-18px position-absolute z-index-1 width-227px">
-                            <column class="background-color-f2 margin-left-30px">
-                                <text class="padding-x-5px">
-                                    <span>Word Wrap</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Font...</span>
-                                </text>
-                            </column>
-                        </box>
-                    </column>
-                </card>
-                <card>
-                    <column>
-                        <box class="-tilde--hover--tap-display-flex z-index-2" onmouseover="mouseover.menu.item(event.target)" onmouseout="mouseout.menu.item(event.target)" data-tap="tap.menu.item(event.target)">
-                            <row>
-                                <text class="padding-x-10px">
-                                    <span>View</span>
-                                </text>
-                            </row>
-                        </box>
-                        <box class="-hover-display-flex -mobile-margin-top-36px -tablet-margin-top-36px background-color-f0 border-1px-solid border-color-ccc display-none line-height-24px margin-top-18px position-absolute z-index-1 width-227px">
-                            <column class="background-color-f2 margin-left-30px">
-                                <text class="padding-x-5px">
-                                    <span>Zoom</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Status Bar</span>
-                                </text>
-                            </column>
-                        </box>
-                    </column>
-                </card>
-                <card>
-                    <column>
-                        <box class="-tilde--hover--tap-display-flex z-index-2" onmouseover="mouseover.menu.item(event.target)" onmouseout="mouseout.menu.item(event.target)" data-tap="tap.menu.item(event.target)">
-                            <row>
-                                <text class="padding-x-10px">
-                                    <span>Help</span>
-                                </text>
-                            </row>
-                        </box>
-                        <box class="-hover-display-flex -mobile-margin-top-36px -tablet-margin-top-36px background-color-f0 border-1px-solid border-color-ccc display-none line-height-24px margin-top-18px position-absolute z-index-1 width-227px">
-                            <column class="background-color-f2 margin-left-30px z-index-2">
-                                <text class="padding-x-5px">
-                                    <span>View Help</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>Send Feedback</span>
-                                </text>
-                                <text class="padding-x-5px">
-                                    <span>About Notepad</span>
-                                </text>
-                            </column>
-                        </box>
-                    </column>
-                </card>
-            </row>
+            </section>
         </header>
-        <main class="flex-1">
-            <page class="width-100pct" data-pages="/" data-root="/">
-                <textarea class="-focus-outline-unset border-unset resize-none width-100pct"></textarea>
-            </page>
+        <nav>
+            <section>
+                <card>
+                    <section></section>
+                </card>
+            </section>
+        </nav>
+        <main class="-dark-background-color-2c2c2e background-color-d3d3d1 border-color-cb border-top-1px-solid flex-1-1-1px flex-wrap-wrap overflow-x-hidden" data-height="calc(100% - 50px)" data-tablet-height="100%">
+            <page class="width-100pct" data-active="true" data-fetch="/cdn/html/page/page.notes.html" data-page="/*/"></page>
+            <page class="width-100pct" data-active="true" data-fetch="/cdn/html/page/page.notes.html" data-page="/notes/"></page>
+            <page class="width-100pct" data-active="true" data-fetch="/cdn/html/page/page.calendar.html" data-page="/calendar/"></page>
+            <page class="width-100pct" data-active="true" data-fetch="/cdn/html/page/page.search.html" data-page="/search/"></page>
+            <page class="width-100pct" data-active="true" data-fetch="/cdn/html/page/page.menu.html" data-page="/menu/"></page>
         </main>
+        <footer class="background-color-e4 border-color-cb border-top-1px-solid bottom-0 color-69 height-50px position-fixed width-100pct">
+            <section>
+                <card class="padding-y-100px">
+                    <row class="align-center justify-content-space-between">
+                        <box>
+                            <section>
+                                <ico>
+                                    <n class="gg-notes"></n>
+                                </ico>
+                            </section>
+                        </box>
+                        <box>
+                            <section>
+                                <ico>
+                                    <n class="gg-calendar-dates"></n>
+                                </ico>
+                            </section>
+                        </box>
+                        <box class="background-color-009688 border-radius-50pct bottom-25px">
+                            <section>
+                                <ico class="color-fff">
+                                    <n class="gg-math-plus"></n>
+                                </ico>
+                            </section>
+                        </box>
+                        <box>
+                            <section>
+                                <ico>
+                                    <n class="gg-search"></n>
+                                </ico>
+                            </section>
+                        </box>
+                        <box>
+                            <section>
+                                <ico>
+                                    <n class="gg-menu"></n>
+                                </ico>
+                            </section>
+                        </box>
+                    </row>
+                </card>
+            </section>
+        </footer>
     </body>
 </html>

@@ -81,11 +81,11 @@
     }
 
     ico:not([data-height]) {
-        height: 45px;
+        height: 50px;
     }
 
     ico:not([data-width]) {
-        width: 45px;
+        width: 50px;
     }
 
     iframe {
@@ -135,8 +135,16 @@
 
 /*BACKGROUND COLOR*/
 @media screen {
+    .background-color-009688 {
+        background-color: #009688;
+    }
+
     .background-color-333 {
         background-color: #333;
+    }
+
+    .background-color-69 {
+        background-color: #696969;
     }
 
     .background-color-f0 {
@@ -151,6 +159,10 @@
         background-color: #ccc;
     }
 
+    .background-color-e4 {
+        background-color: #e4e4e4;
+    }
+
     .background-color-fff {
         background-color: #fff;
     }
@@ -162,8 +174,16 @@
         border: 1px solid;
     }
 
+    .border-bottom-1px-solid {
+        border-bottom: 1px solid;
+    }
+
     .border-bottom-2px-solid {
         border-bottom: 2px solid;
+    }
+
+    .border-top-1px-solid {
+        border-top: 1px solid;
     }
 
     .border-unset {
@@ -173,6 +193,10 @@
 
 /*BORDER COLOR*/
 @media screen {
+    .border-color-cb {
+        border-color: #cbcbcb;
+    }
+    
     .border-color-ccc {
         border-color: #ccc;
     }
@@ -186,6 +210,17 @@
 @media screen {
     .border-radius-5px {
         border-radius: 5px;
+    }
+
+    .border-radius-50pct {
+        border-radius: 50%;
+    }
+}
+
+/*BOTTOM*/
+@media screen {
+    .bottom-25px {
+        bottom: 25px;
     }
 }
 
@@ -202,6 +237,10 @@
 @media screen {
     .color-000 {
         color: #000;
+    }
+
+    .color-69 {
+        color: #696969;
     }
 
     .color-fff {
@@ -362,6 +401,10 @@
         margin-left: 30px;
     }
 
+    .margin-right-auto {
+        margin-right: auto;
+    }
+
     .margin-top-18px {
         margin-top: 18px;
     }
@@ -380,6 +423,37 @@
         .-mobile-margin-top-36px {
             margin-top: 36px;
         }
+    }
+}
+
+@media screen {
+    .gg-more-vertical-alt {
+        transform: scale(var(--ggs,1))
+    }
+
+    .gg-more-vertical-alt, .gg-more-vertical-alt::after, .gg-more-vertical-alt::before {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        width: 4px;
+        height: 4px;
+        background: currentColor;
+        border-radius: 100%
+    }
+
+    .gg-more-vertical-alt::after, .gg-more-vertical-alt::before {
+        content: "";
+        position: absolute
+    }
+
+    .gg-more-vertical-alt::after {
+        left: 0;
+        top: 6px
+    }
+
+    .gg-more-vertical-alt::before {
+        top: -6px;
+        right: 0
     }
 }
 
@@ -405,6 +479,10 @@
 
     .padding-x-10px {
         padding: 0 10px;
+    }
+
+    .padding-y-10px {
+        padding: 10px 0;
     }
 }
 
