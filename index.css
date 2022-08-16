@@ -118,6 +118,7 @@
     page, pages {
         display: flex;
         position: relative;
+        flex-direction: column;
     }
 
     body > page, body > pages {
@@ -554,6 +555,10 @@
 @media screen {
     .width-227px, [data-width="227px"] {
         width: 227px;
+    }
+
+    .width-320px {
+        width: 320px;
     }
 
     .width-100pct, [data-width="100%"] {
