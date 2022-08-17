@@ -13,22 +13,22 @@ window.mvc.v = view = function(route) {
         if (root) {
 
             if (root === "menu") {
-                dom.body.main.dataset.zIndex = 2;
-                dom.body.nav.dataset.zIndex = 1;
+                dom.body.note.dataset.zIndex = 2;
+                dom.body.page.dataset.zIndex = 1;
                 
                 log(route);
                 resolve(route);
             }
             if (root === "note") {
-                dom.body.main.dataset.zIndex = 1;
-                dom.body.nav.dataset.zIndex = 2;
+                dom.body.note.dataset.zIndex = 1;
+                dom.body.page.dataset.zIndex = 2;
                 
                 log(route);
                 resolve(route);
             }
             else if (root === "search") {
-                dom.body.main.dataset.zIndex = 2;
-                dom.body.nav.dataset.zIndex = 1;
+                dom.body.note.dataset.zIndex = 2;
+                dom.body.page.dataset.zIndex = 1;
                 
                 log(route);
                 resolve(route);

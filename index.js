@@ -3,7 +3,8 @@ window.onload = ()=>{
         body: document.body,
         boot: document.getElementById("boot"),
         main: document.getElementById('main'),
-        nav: document.getElementById('nav')
+        note: document.getElementById('note'),
+        page: document.getElementById('page')
     };
 
     dom.body.dataset.load = "ing";
