@@ -4,11 +4,11 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
         <link href="index.css" rel="stylesheet">
         <link href="cdn/css/gg.css" rel="stylesheet">
-        <script src="index.js"></script>
         <script src="cdn/js/mvc.js"></script>
         <script src="cdn/js/on.js"></script>
         <script src="cdn/js/router.js"></script>
         <script src="cdn/js/vanilla.js"></script>
+        <script src="index.js"></script>
     </head>
     <body class="-dark-background-color-1f background-color-fff" data-theme="system">
         <boot id="boot"></boot>
@@ -52,35 +52,35 @@
                     <section>
                         <card>
                             <row class="align-center justify-content-space-between">
-                                <box>
+                                <box data-href="/">
                                     <section>
                                         <ico>
                                             <n class="gg-notes"></n>
                                         </ico>
                                     </section>
                                 </box>
-                                <box>
+                                <box data-href="/date/">
                                     <section>
                                         <ico>
                                             <n class="gg-calendar-dates"></n>
                                         </ico>
                                     </section>
                                 </box>
-                                <box class="background-color-009688 border-radius-50pct bottom-25px">
+                                <box class="background-color-009688 border-radius-50pct bottom-25px" data-href="/note/">
                                     <section>
                                         <ico class="color-fff">
                                             <n class="gg-math-plus"></n>
                                         </ico>
                                     </section>
                                 </box>
-                                <box>
+                                <box data-href="/find/">
                                     <section>
                                         <ico>
                                             <n class="gg-search"></n>
                                         </ico>
                                     </section>
                                 </box>
-                                <box>
+                                <box data-href="/menu/">
                                     <section>
                                         <ico>
                                             <n class="gg-menu"></n>
@@ -97,7 +97,7 @@
                     <section>
                         <card>
                             <row class="align-items-center">
-                                <box class="-tablet-display-flex display-none">
+                                <box class="-tablet-display-flex display-none" data-tap="history.go(-1)">
                                     <section>
                                         <ico>
                                             <n class="gg-arrow-left"></n>

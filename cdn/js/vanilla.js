@@ -66,6 +66,16 @@ Element.prototype.hasClass = function(n) {
     return new RegExp(' ' + n + ' ').test(' ' + this.className + ' ');
 }
 
+String.prototype.contains = function(pattern) {
+    var value = false
+      , p = 0;
+    do {
+        value === false ? value = this.toString().includes(pattern[p]) : null;
+        p++;
+    } while (p < pattern.length);
+    return value;
+}
+
 window.$ = function(e) {
     var obj = e;
     if (typeof obj === 'object') {
@@ -91,7 +101,25 @@ window.$ = function(e) {
     }
     return obj;
 }
-
 window.byId = s=>{
     return document.getElementById(s);
+}
+window.is = {
+    json: str=>{
+        try {
+            JSON.parse(str);
+        } catch (e) {
+            return false;
+        }
+        return true;
+    }
+    ,
+    local: href=>href.contains(['127.0.0.1', 'about:', 'blob:', 'file:', 'localhost']),
+    mobile: ()=>{
+        return ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend"in document)
+    }
+    ,
+    touch: ()=>{
+        return (('ontouchstart'in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+    }
 }

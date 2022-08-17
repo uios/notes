@@ -11,36 +11,41 @@ window.mvc.v = view = function(route) {
         console.log('GET', GET, route, root);
 
         if (root) {
-
-            if (root === "menu") {
-                dom.body.note.dataset.zIndex = 2;
-                dom.body.page.dataset.zIndex = 1;
-                
-                log(route);
-                resolve(route);
-            }
             if (root === "note") {
-                dom.body.note.dataset.zIndex = 1;
-                dom.body.page.dataset.zIndex = 2;
-                
+                dom.note.dataset.zIndex = 2;
+                dom.page.dataset.zIndex = 1;
+            } else {
+                dom.note.dataset.zIndex = 1;
+                dom.page.dataset.zIndex = 2;
+            }
+
+            if (root === "date") {
                 log(route);
                 resolve(route);
             }
-            else if (root === "search") {
-                dom.body.note.dataset.zIndex = 2;
-                dom.body.page.dataset.zIndex = 1;
-                
+            else if (root === "menu") {
+                log(route);
+                resolve(route);
+            }
+            else if (root === "note") {
                 log(route);
                 resolve(route);
             } 
-            else {                
+            else if (root === "find") {
+
+                log(route);
+                resolve(route);
+            } else {
                 const e = {
                     code: 404
                 }
                 reject(e);
             }
 
-        } else {}
+        } else {
+            log(route);
+            resolve(route);
+        }
 
         function log(route) {
             console.log('mvc.v log', route);

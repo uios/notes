@@ -7,12 +7,13 @@ String.prototype.router = async function(params) {
         if (route) {
             var pop = params ? params.pop : null;
             var path = route.path;
-            window.GET = rout.ed.dir(path).filter(n => n);
+            window.GET = rout.ed.dir(path);
 
             route = window.view ? await view(route).then(rout.ed.bang(route)) : await rout.ed.bang(route);
 
             if (!pop && !["blob:"].includes(window.location.protocol)) {
-                history.pushState(route.path, '', route.path);
+                var goto = window.global.domains.subdomain === "uios" ? '/notes' : '';
+                history.pushState(goto + route.path, '', goto + route.path);
             }
 
             resolve(route);
@@ -30,10 +31,10 @@ window.rout = {};
 
 window.rout.e = state=>{
     var arr1 = [];
-    var arr2 = rout.ed.dir(state.split('#')[0].split('?')[0]).filter(n => n);
+    var arr2 = rout.ed.dir(state.split('#')[0].split('?')[0]);
     var page = '/';
     var path = rout.ed.url(arr2);
-    const GOT = rout.ed.dir(path).filter(n => n);
+    const GOT = rout.ed.dir(path);
     const root = GOT[0];
     const hash = state.split('#').length > 1 ? state.split('#')[1] : null;
     const search = state.split('?').length > 1 ? state.split('?')[1].split('#')[0] : null;
@@ -66,10 +67,14 @@ window.rout.ed.bang = async(route)=>{
     var page = dom.body.find('page[data-page="' + route.page + '"]');
     var vp = page ? page : pages;
 
+    if (vp) {
+        var goto = window.global.domains.subdomain === "uios" ? '/notes' : '';
+        vp.innerHTML === "" && vp.dataset.fetch ? vp.innerHTML = await ajax(goto + vp.dataset.fetch) : null;
+    }
+
     $('[data-hide]').attr("data-active", true);
     $(':not(page)[data-pages]').removeAttr("data-active");
     $(':not(page)[data-page]').removeAttr("data-active");
-    $(':not(page)[data-path]').removeAttr("data-active");
 
     if (vp && vp.closest('main')) {
         $('pages[data-pages]').removeAttr("data-active");
@@ -83,7 +88,6 @@ window.rout.ed.bang = async(route)=>{
 
     $('[data-hide="' + route.page + '"]').attr("data-active", false);
     $('[data-page="' + route.page + '"]').attr("data-active", true);
-    $('[data-path="' + route.path + '"]').attr("data-active", true);
 
     var rs = $('[data-pages]');
     if (rs.length > 0) {
