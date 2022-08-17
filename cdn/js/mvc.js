@@ -8,14 +8,32 @@ window.mvc.v = view = function(route) {
         var path = route.path;
         var get = route ? route.GOT : rout.ed.dir(dom.body.dataset.path);
         var root = get[0];
-        console.log('GET', GET, route);
+        console.log('GET', GET, route, root);
 
         if (root) {
 
-            if (root === "note") {
+            if (root === "menu") {
+                dom.body.main.dataset.zIndex = 2;
+                dom.body.nav.dataset.zIndex = 1;
+                
                 log(route);
                 resolve(route);
-            } else {
+            }
+            if (root === "note") {
+                dom.body.main.dataset.zIndex = 1;
+                dom.body.nav.dataset.zIndex = 2;
+                
+                log(route);
+                resolve(route);
+            }
+            else if (root === "search") {
+                dom.body.main.dataset.zIndex = 2;
+                dom.body.nav.dataset.zIndex = 1;
+                
+                log(route);
+                resolve(route);
+            } 
+            else {                
                 const e = {
                     code: 404
                 }

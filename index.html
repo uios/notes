@@ -5,14 +5,15 @@
         <link href="index.css" rel="stylesheet">
         <link href="cdn/css/gg.css" rel="stylesheet">
         <script src="index.js"></script>
+        <script src="cdn/js/mvc.js"></script>
         <script src="cdn/js/on.js"></script>
         <script src="cdn/js/router.js"></script>
         <script src="cdn/js/vanilla.js"></script>
     </head>
     <body class="-dark-background-color-1f background-color-fff" data-theme="system">
         <boot id="boot"></boot>
-        <nav class="height-100pct width-320px">
-            <header class="background-color-e4 border-bottom-1px-solid border-color-cb position-fixed width-320px">
+        <nav class="-tablet-position-relative -tablet-min-height-100pct -tablet-width-100pct background-color-fff height-100pct width-320px" data-z-index="2" id="nav">
+            <header class="-tablet-width-100pct background-color-e4 border-bottom-1px-solid border-color-cb position-fixed width-320px">
                 <section>
                     <card>
                         <row class="align-items-center">
@@ -44,7 +45,7 @@
                     <section></section>
                 </card>
             </section>
-            <footer class="background-color-e4 border-color-cb border-top-1px-solid bottom-0 color-69 height-50px position-fixed width-320px">
+            <footer class="-tablet-width-100pct background-color-e4 border-color-cb border-top-1px-solid bottom-0 color-69 height-50px position-fixed width-320px">
                 <section>
                     <card>
                         <row class="align-center justify-content-space-between">
@@ -88,21 +89,21 @@
                 </section>
             </footer>
         </nav>
-        <main class="border-color-cb border-left-1px-solid flex-1 flex-direction-column">
+        <main class="-tablet-position-absolute -tablet-min-height-100pct -tablet-width-100pct background-color-fff border-color-cb border-left-1px-solid flex-1 flex-direction-column" id="main">
             <header class="background-color-e4 border-bottom-1px-solid border-color-cb position-relative width-100pct">
                 <section>
                     <card>
                         <row class="align-items-center">
-                            <box>
+                            <box class="-tablet-display-flex display-none">
                                 <section>
                                     <ico>
                                         <n class="gg-arrow-left"></n>
                                     </ico>
                                 </section>
                             </box>
-                            <box class="background-color-fff border-1px-solid border-color-cb flex-1 margin-right-auto">
+                            <box class="background-color-fff border-1px-solid border-color-cb box-sizing-border-box flex-1 margin-left-5px margin-right-auto">
                                 <section>
-                                    <input class="height-36px" type="text">
+                                    <input class="height-40px" type="text">
                                 </section>
                             </box>
                             <box>
