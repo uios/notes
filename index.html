@@ -10,11 +10,11 @@
         <script src="cdn/js/vanilla.js"></script>
         <script src="index.js"></script>
     </head>
-    <body class="-dark-background-color-1f background-color-fff" data-theme="system">
+    <body class="-dark-background-color-1f background-color-e4" data-theme="system">
         <boot id="boot"></boot>
         <main class="flex-1" id="main">
-            <blocks class="-tablet-position-relative -tablet-min-height-100pct -tablet-width-100pct background-color-fff height-100pct width-320px" data-z-index="2" id="page">
-                <header class="-tablet-width-100pct background-color-e4 border-bottom-1px-solid border-color-cb position-fixed width-320px">
+            <blocks class="-tablet-position-relative -tablet-min-height-100pct -tablet-width-100pct background-color-e4 display-flex height-100pct overflow-hidden width-320px" data-z-index="2" id="page">
+                <header class="-tablet-width-100pct background-color-e4 border-bottom-1px-solid border-color-cb box-sizing-border-box position-fixed width-320px z-index-1">
                     <section>
                         <card>
                             <row class="align-items-center">
@@ -41,14 +41,11 @@
                         </card>
                     </section>
                 </header>
-                <block>
-                    <section>
-                        <card>
-                            <section></section>
-                        </card>
-                    </section>
-                </block>
-                <footer class="-tablet-width-100pct background-color-e4 border-color-cb border-top-1px-solid bottom-0 color-69 height-50px position-fixed width-320px">
+                <page class="flex-1" data-fetch="/cdn/html/page/page.index.html" data-page="/"></page>
+                <page data-fetch="/cdn/html/page/page.date.html" data-page="/date/"></page>
+                <page data-fetch="/cdn/html/page/page.find.html" data-page="/find/"></page>
+                <page data-fetch="/cdn/html/page/page.menu.html" data-page="/menu/"></page>
+                <footer class="-tablet-width-100pct background-color-e4 border-color-cb border-top-1px-solid bottom-0 color-69 box-sizing-border-box height-50px position-fixed width-320px z-index-5">
                     <section>
                         <card>
                             <row class="align-center justify-content-space-between">

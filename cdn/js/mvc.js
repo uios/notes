@@ -23,6 +23,11 @@ window.mvc.v = view = function(route) {
                 log(route);
                 resolve(route);
             }
+            else if (root === "find") {
+
+                log(route);
+                resolve(route);
+            } 
             else if (root === "menu") {
                 log(route);
                 resolve(route);
@@ -30,12 +35,8 @@ window.mvc.v = view = function(route) {
             else if (root === "note") {
                 log(route);
                 resolve(route);
-            } 
-            else if (root === "find") {
-
-                log(route);
-                resolve(route);
-            } else {
+            }
+            else {
                 const e = {
                     code: 404
                 }

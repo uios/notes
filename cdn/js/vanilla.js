@@ -123,3 +123,52 @@ window.is = {
         return (('ontouchstart'in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
     }
 }
+
+function ajax(url, settings) {
+    var dir = window.location.href.split(url);
+    return new Promise((resolve,reject)=>{
+        var req;
+        var data = {};
+        if (settings) {
+            settings.headers ? data.headers = settings.headers : null;
+            if (settings.dataType) {
+                data = {
+                    method: settings.dataType,
+                    body: (settings.data ? settings.data : null)
+                };
+                settings.dataType === "OPTIONS" ? data.credentials = 'include' : null;
+            } else {
+                req = url;
+            }
+        } else {
+            req = url;
+        }
+        fetch(url, data).then(async(response)=>{
+            if (!response.ok) {
+                return response.text().then(text=>{
+                    var statusText = JSON.parse(text);
+                    var data = {
+                        code: response.status,
+                        message: statusText
+                    };
+                    var text = JSON.stringify(data);
+                    throw new Error(text);
+                }
+                )
+            }
+            return response.text();
+        }
+        ).then(response=>{
+            const isJSON = is.json(response);
+            const data = isJSON ? JSON.parse(response) : response;
+            resolve(response);
+        }
+        ).then(response=>resolve(response)).catch(error=>{
+            console.log('vanilla.js ajax.fetch catch', error.message);
+            var message = JSON.parse(error.message);
+            reject(message);
+        }
+        );
+    }
+    );
+}
