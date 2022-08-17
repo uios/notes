@@ -11,7 +11,7 @@
     </head>
     <body class="-dark-background-color-1f background-color-fff" data-theme="system">
         <boot id="boot"></boot>
-        <nav class="border-color-cb border-right-1px-solid height-100pct width-320px">
+        <nav class="height-100pct width-320px">
             <header class="background-color-e4 border-bottom-1px-solid border-color-cb position-fixed width-320px">
                 <section>
                     <card>
@@ -88,7 +88,7 @@
                 </section>
             </footer>
         </nav>
-        <main class="flex-1 flex-direction-column">
+        <main class="border-color-cb border-left-1px-solid flex-1 flex-direction-column">
             <header class="background-color-e4 border-bottom-1px-solid border-color-cb position-relative width-100pct">
                 <section>
                     <card>
@@ -124,15 +124,15 @@
                 </section>
             </header>
             <block class="flex-1 overflow-x-hidden">
-                <column class="min-height-100pct">
+                <section class="min-height-100pct">
                     <card>
                         <row class="justify-content-space-between padding-2px">
                             <text>Editing</text>
                             <text>8/8/22 12:27 AM</text>
                         </row>
                     </card>
-                    <textarea class="-focus-outline-unset background-position-y-24px background-size-100pct-2em border-unset flex-1 line-height-2em" data-background-image="linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px)" oninput="on.input"></textarea>
-                </column
+                    <textarea class="-focus-outline-unset background-position-y-24px background-size-100pct-2em border-unset flex-1 font-family-arial line-height-2em min-height-100pct resize-none width-100pct" data-background-image="linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px)" oninput="on.input.note(this)"></textarea>
+                </section>
             </block>
         </main>
     </body>

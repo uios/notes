@@ -204,6 +204,10 @@
         border-bottom: 2px solid;
     }
 
+    .border-left-1px-solid {
+        border-left: 1px solid;
+    }
+
     .border-right-1px-solid {
         border-right: 1px solid;
     }
@@ -329,6 +333,13 @@
 
     .flex-wrap-wrap {
         flex-wrap: wrap;
+    }
+}
+
+/*FONT FAMILY*/
+@media screen {
+    .font-family-arial {
+        font-family: Arial;
     }
 }
 
@@ -590,7 +601,7 @@
 
 /*SCROLL*/
 @media screen {
-    .scroll-y {
+    .overflow-x-hidden {
         overflow-x: hidden;
     }
 }
