@@ -11,110 +11,129 @@
     </head>
     <body class="-dark-background-color-1f background-color-fff" data-theme="system">
         <boot id="boot"></boot>
-        <header class="background-color-e4 border-bottom-1px-solid border-color-cb position-fixed width-100pct">
-            <section>
-                <card>
-                    <row class="align-items-center">
-                        <box class="margin-right-auto">
-                            <section>
-                                <text class="font-size-24px padding-x-10px">Notes</text>
-                            </section>
-                        </box>
-                        <box>
-                            <section>
-                                <ico>
-                                    <n class="-ggs-2 gg-layout-grid"></n>
-                                </ico>
-                            </section>
-                        </box>
-                        <box>
-                            <section>
-                                <ico>
-                                    <n class="gg-more-vertical-alt"></n>
-                                </ico>
-                            </section>
-                        </box>
-                    </row>
-                </card>
-            </section>
-        </header>
-        <nav class="background-color-333 height-100pct width-320px">
+        <nav class="border-color-cb border-right-1px-solid height-100pct width-320px">
+            <header class="background-color-e4 border-bottom-1px-solid border-color-cb position-fixed width-320px">
+                <section>
+                    <card>
+                        <row class="align-items-center">
+                            <box class="margin-right-auto">
+                                <section>
+                                    <text class="font-size-24px padding-x-10px">Notes</text>
+                                </section>
+                            </box>
+                            <box>
+                                <section>
+                                    <ico>
+                                        <n class="-ggs-2 gg-layout-grid"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                            <box>
+                                <section>
+                                    <ico>
+                                        <n class="gg-more-vertical-alt"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                        </row>
+                    </card>
+                </section>
+            </header>
             <section>
                 <card>
                     <section></section>
                 </card>
             </section>
+            <footer class="background-color-e4 border-color-cb border-top-1px-solid bottom-0 color-69 height-50px position-fixed width-320px">
+                <section>
+                    <card>
+                        <row class="align-center justify-content-space-between">
+                            <box>
+                                <section>
+                                    <ico>
+                                        <n class="gg-notes"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                            <box>
+                                <section>
+                                    <ico>
+                                        <n class="gg-calendar-dates"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                            <box class="background-color-009688 border-radius-50pct bottom-25px">
+                                <section>
+                                    <ico class="color-fff">
+                                        <n class="gg-math-plus"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                            <box>
+                                <section>
+                                    <ico>
+                                        <n class="gg-search"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                            <box>
+                                <section>
+                                    <ico>
+                                        <n class="gg-menu"></n>
+                                    </ico>
+                                </section>
+                            </box>
+                        </row>
+                    </card>
+                </section>
+            </footer>
         </nav>
-        <main class="background-color-d3d3d1 flex-1">
-            <page class="width-100pct" data-active="true" data-fetch="/cdn/html/page/page.notes.html" data-page="/*/">
-                <header>
-                    <section>
-                        <card>
-                            <row>
-                                <box>
+        <main class="flex-1 flex-direction-column">
+            <header class="background-color-e4 border-bottom-1px-solid border-color-cb position-relative width-100pct">
+                <section>
+                    <card>
+                        <row class="align-items-center">
+                            <box>
+                                <section>
                                     <ico>
-                                        <n></n>
+                                        <n class="-ggs-2 gg-check"></n>
                                     </ico>
-                                </box>
-                                <box>
+                                </section>
+                            </box>
+                            <box class="background-color-fff border-1px-solid border-color-cb flex-1 margin-right-auto">
+                                <section>
+                                    <input class="height-36px" type="text">
+                                </section>
+                            </box>
+                            <box>
+                                <section>
                                     <ico>
-                                        <n></n>
+                                        <n class="-ggs-2 gg-layout-grid"></n>
                                     </ico>
-                                </box>
-                                <box>
+                                </section>
+                            </box>
+                            <box>
+                                <section>
                                     <ico>
-                                        <n class="gg-more-alt"></n>
+                                        <n class="gg-more-vertical-alt"></n>
                                     </ico>
-                                </box>
-                            </row>
-                        </card>
-                    </section>
-                </header>
-                <textarea></textarea>
-            </page>
+                                </section>
+                            </box>
+                        </row>
+                    </card>
+                </section>
+            </header>
+            <block class="flex-1 overflow-x-hidden">
+                <column class="min-height-100pct">
+                    <card>
+                        <row class="justify-content-space-between padding-2px">
+                            <text>Editing</text>
+                            <text>8/8/22 12:27 AM</text>
+                        </row>
+                    </card>
+                    <textarea class="-focus-outline-unset background-position-y-24px background-size-100pct-2em border-unset flex-1 line-height-2em" data-background-image="linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px)" oninput="on.input"></textarea>
+                </column
+            </block>
         </main>
-        <footer class="background-color-e4 border-color-cb border-top-1px-solid bottom-0 color-69 height-50px position-fixed width-100pct">
-            <section>
-                <card class="padding-y-100px">
-                    <row class="align-center justify-content-space-between">
-                        <box>
-                            <section>
-                                <ico>
-                                    <n class="gg-notes"></n>
-                                </ico>
-                            </section>
-                        </box>
-                        <box>
-                            <section>
-                                <ico>
-                                    <n class="gg-calendar-dates"></n>
-                                </ico>
-                            </section>
-                        </box>
-                        <box class="background-color-009688 border-radius-50pct bottom-25px">
-                            <section>
-                                <ico class="color-fff">
-                                    <n class="gg-math-plus"></n>
-                                </ico>
-                            </section>
-                        </box>
-                        <box>
-                            <section>
-                                <ico>
-                                    <n class="gg-search"></n>
-                                </ico>
-                            </section>
-                        </box>
-                        <box>
-                            <section>
-                                <ico>
-                                    <n class="gg-menu"></n>
-                                </ico>
-                            </section>
-                        </box>
-                    </row>
-                </card>
-            </section>
-        </footer>
     </body>
 </html>

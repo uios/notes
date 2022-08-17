@@ -431,3 +431,10 @@ window.on["change"] = {
         );
     }
 };
+
+window.on.input = {};
+
+window.on.input.notes = function(textarea) {
+    var scroll_height = textarea.scrollHeight;
+    textarea.style.height = scroll_height + 'px';
+}
