@@ -483,6 +483,10 @@
     }
 
     @media (max-width: 768px) {
+        .-tablet-margin-left-0 {
+            margin-left: 0;
+        }
+        
         .-tablet-margin-top-36px {
             margin-top: 36px;
         }
