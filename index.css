@@ -395,6 +395,10 @@
     .height-22px, [data-height="22px"] {
         height: 22px;
     }
+    
+    .height-30px, [data-height="30px"] {
+        height: 30px;
+    }
 
     .height-36px {
         height: 36px;
@@ -458,6 +462,10 @@
         margin-right: auto;
     }
 
+    .margin-right-5px {
+        margin-right: 5px;
+    }
+
     .margin-top-18px {
         margin-top: 18px;
     }
@@ -476,37 +484,6 @@
         .-mobile-margin-top-36px {
             margin-top: 36px;
         }
-    }
-}
-
-@media screen {
-    .gg-more-vertical-alt {
-        transform: scale(var(--ggs,1))
-    }
-
-    .gg-more-vertical-alt, .gg-more-vertical-alt::after, .gg-more-vertical-alt::before {
-        box-sizing: border-box;
-        position: relative;
-        display: block;
-        width: 4px;
-        height: 4px;
-        background: currentColor;
-        border-radius: 100%
-    }
-
-    .gg-more-vertical-alt::after, .gg-more-vertical-alt::before {
-        content: "";
-        position: absolute
-    }
-
-    .gg-more-vertical-alt::after {
-        left: 0;
-        top: 6px
-    }
-
-    .gg-more-vertical-alt::before {
-        top: -6px;
-        right: 0
     }
 }
 
@@ -632,6 +609,10 @@
 
 /*WIDTH*/
 @media screen {
+    .width-30px, [data-width="30px"] {
+        width: 30px;
+    }
+    
     .width-227px, [data-width="227px"] {
         width: 227px;
     }
